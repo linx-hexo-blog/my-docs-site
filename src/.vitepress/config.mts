@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/docs-site/',
   title: "My Awesome Project",
   description: "A VitePress Site",
   themeConfig: {
@@ -31,6 +32,7 @@ export default defineConfig({
       copyright: 'Copyright © 2024 LinX'
     }
   },
-  base: '/docs-site/',
+
+  // build输出路径
   outDir: '../docs'
 })
