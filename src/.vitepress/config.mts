@@ -23,7 +23,13 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+
+    footer: {
+      // https://vitepress.dev/reference/default-theme-config#footer
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024 LinX'
+    }
   },
   base: '/docs-site/',
   outDir: '../docs'
