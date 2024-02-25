@@ -3,13 +3,15 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/docs-site/',
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "Liomsom",
+  description: "我的博客",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'AA', link: '/aaa' },
+      { text: 'BB', link: '/avv' },
     ],
 
     sidebar: [
@@ -19,11 +21,19 @@ export default defineConfig({
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
+      },
+
+      {
+        text: 'Vue3-music-demo',
+        items: [
+          { text: '01-demo', link: '/vue3-music-demo/01-init' },
+          { text: '02-test', link: '/vue3-music-demo/02-test' }
+        ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/lionsom' }
     ],
 
     footer: {

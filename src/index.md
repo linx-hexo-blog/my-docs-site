@@ -3,13 +3,16 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "lionsom的web博客"
+  text: ""
+  tagline: "stay hungry, stay foolish."
   actions:
     - theme: brand
       text: Markdown Examples
       link: /markdown-examples
+    - theme: alt
+      text: API Examples
+      link: /api-examples
     - theme: alt
       text: API Examples
       link: /api-examples
