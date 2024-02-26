@@ -9,28 +9,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-      { text: 'AA', link: '/aaa' },
+      { text: 'Examples', link: '/examples/markdown-examples' },
+      { text: 'Vue3音乐', link: '/vue3-music-demo/01-init' },
       { text: 'BB', link: '/avv' },
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      },
-
-      {
-        text: 'Vue3-music-demo',
-        items: [
-          { text: '01-demo', link: '/vue3-music-demo/01-init' },
-          { text: '02-test', link: '/vue3-music-demo/02-test' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/guide/': getGuideSidebar(),
+      '/examples/': getExamplesSidebar(),
+      '/vue3-music-demo/': getMusicSidebar(),
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lionsom' }
@@ -46,3 +34,57 @@ export default defineConfig({
   // build输出路径
   outDir: '../docs'
 })
+
+function getExamplesSidebar() {
+  return [
+    {
+      text: 'Examples',
+      items: [
+        { text: 'Markdown Examples', link: '/examples/markdown-examples' },
+        { text: 'Runtime API Examples', link: '/examples/api-examples' }
+      ]
+    }
+  ]
+}
+
+function getMusicSidebar() {
+  return [
+    {
+      text: 'Vue3音乐播放器',
+      items: [
+        { text: '01-demo', link: '/vue3-music-demo/01-init' },
+        { text: '02-test', link: '/vue3-music-demo/02-test' }
+      ]
+    }
+  ]
+}
+
+// ******************* Guide *******************
+function getGuideSidebar() {
+  return [
+    {
+      text: 'Introduction',
+      children: [
+        { text: 'What is VitePress?', link: '/' },
+        { text: 'Getting Started', link: '/guide/getting-started' },
+        { text: 'Configuration', link: '/guide/configuration' },
+        { text: 'Asset Handling', link: '/guide/assets' },
+        { text: 'Markdown Extensions', link: '/guide/markdown' },
+        { text: 'Using Vue in Markdown', link: '/guide/using-vue' },
+        { text: 'Deploying', link: '/guide/deploy' }
+      ]
+    },
+    {
+      text: 'Advanced',
+      children: [
+        { text: 'Frontmatter', link: '/guide/frontmatter' },
+        { text: 'Theming', link: '/guide/theming' },
+        { text: 'API Reference', link: '/guide/api' },
+        {
+          text: 'Differences from Vuepress',
+          link: '/guide/differences-from-vuepress'
+        }
+      ]
+    }
+  ]
+}
